@@ -4,7 +4,7 @@ The goal of this repository is to show how Lua with [Lua.vm.js](https://github.c
 
 IMAGE HERE
 
-# How to use
+## How to use
 
 Clone this repository with sub modules :
 `git clone --recursive git@github.com:MangelMaxime/Lua.vm.js-Samples.git`
@@ -20,7 +20,7 @@ Install the *devDependencies* : `npm install`
 
 Run the server : `./node_modules/http-server/bin/http-server`
 
-# TODO
+## TODO
 
 - [ ] Documentation
 - [ ] Simple turtle
@@ -29,7 +29,7 @@ Run the server : `./node_modules/http-server/bin/http-server`
 - [ ] Ajax call
 - [ ] Json serialisation and deserialisation
 
-# Licences
+## Licences
 
 This project is MIT/X11 licensed. Please see the COPYING file in the source package for more information.
 
