@@ -1,0 +1,22 @@
+# Lua.vm.js-Samples
+
+The goal of this repository is to show how Lua with [Lua.vm.js](https://github.com/daurnimator/lua.vm.js) can be used as an alternative to standard Javascript.
+
+# How to use
+
+
+
+# TODO
+
+- [ ] Documentation
+- [ ] Simple turtle
+- [ ] Turtle that can be commanded
+- [ ] Form validation
+- [ ] Ajax call
+- [ ] Json serialisation and deserialisation
+
+# Licences
+
+This project is MIT/X11 licensed. Please see the COPYING file in the source package for more information.
+
+Copyright (c) 2016 Maxime Mangel (Shadaen)
