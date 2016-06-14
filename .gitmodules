@@ -1,0 +1,3 @@
+[submodule "lua.vm.js"]
+	path = lua.vm.js
+	url = https://github.com/daurnimator/lua.vm.js.git
