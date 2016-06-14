@@ -2,7 +2,8 @@
 
 The goal of this repository is to show how Lua with [Lua.vm.js](https://github.com/daurnimator/lua.vm.js) can be used as an alternative to standard Javascript.
 
-IMAGE HERE
+**Boat sample**
+![Boat sample](https://raw.githubusercontent.com/MangelMaxime/Lua.vm.js-Samples/master/img/boat_sample.png)
 
 ## How to use
 
