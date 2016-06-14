@@ -2,9 +2,23 @@
 
 The goal of this repository is to show how Lua with [Lua.vm.js](https://github.com/daurnimator/lua.vm.js) can be used as an alternative to standard Javascript.
 
+IMAGE HERE
+
 # How to use
 
+Clone this repository with sub modules :
+`git clone --recursive git@github.com:MangelMaxime/Lua.vm.js-Samples.git`
 
+Access the cloned repo : `cd Lua.vm.js-Samples/`
+
+Start a  web server to start serving the files.
+
+------------
+If you don't have one just follow the next instructions
+
+Install the *devDependencies* : `npm install`
+
+Run the server : `./node_modules/http-server/bin/http-server`
 
 # TODO
 
