@@ -1,0 +1,15 @@
+{
+  "name": "lua.vm.js-samples",
+  "version": "0.0.1",
+  "description": "Samples to demonstrates the usage of lua.vm.js",
+  "main": "lua.vm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Maxime Mangel <mangel.maxime@outlook.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^0.9.0"
+  }
+}
