@@ -1,0 +1,50 @@
+form {
+  margin:10px 0;
+  width: 330px;
+}
+
+label {
+  color: #404040;
+  float: left;
+  font-size: 13px;
+  line-height: 18px;
+  padding-top: 6px;
+  text-align: right;
+  width: 150px;
+}
+
+label, input, select, textarea {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  line-height: normal;
+}
+
+input, textarea, select {
+  -moz-border-radius: 3px 3px 3px 3px;
+  border: 1px solid #CCCCCC;
+  color: #808080;
+  display: inline-block;
+  font-size: 13px;
+  height: 18px;
+  line-height: 18px;
+  padding: 4px;
+  width: 210px;
+}
+
+select {
+  height: 27px;
+  line-height: 27px;
+}
+
+form .input {
+  margin-left: 180px;
+}
+
+form .line {
+  margin-bottom: 18px;
+}
+
+form button {
+  float: right;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-GB" dir="ltr">
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Lua.vm.js</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+    <p>A simple form validator</p>
+
+    <form class="to-validate">
+      <div class="line">
+        <label for="pseudo">Pseudo</label>
+        <div class="input">
+          <input id="pseudo" type="text" name="pseudo">
+        </div>
+      </div>
+
+      <div class="line">
+        <label for="email">Email</label>
+        <div class="input">
+          <input id="email" type="text" name="input">
+        </div>
+      </div>
+
+      <div class="line">
+        <label for="password">Password</label>
+        <div class="input">
+          <input id="password" type="text" name="input">
+        </div>
+      </div>
+
+      <div class="line">
+        <label for="password_conf">Password Confirmation</label>
+        <div class="input">
+          <input id="password_conf" type="text" name="input">
+        </div>
+      </div>
+
+      <button>Validate</button>
+    </form>
+
+    <script src="./../../lua.vm.js/dist/lua.vm.js"></script>
+    <script type="text/lua">
+      require "validator"
+    </script>
+	</body>
+</html>

@@ -1,3 +1,4 @@
+-- Examples converted from http://www.alsacreations.com/tuto/lire/1511-introduction-canvas.html
 local window = js.global
 local document = window.document
 
