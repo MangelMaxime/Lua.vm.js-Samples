@@ -48,3 +48,10 @@ form .line {
 form button {
   float: right;
 }
+
+.errors-display {
+  text-align: center;
+  list-style: none;
+  color: red;
+  font-size: 13px;
+}

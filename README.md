@@ -12,7 +12,7 @@ Clone this repository with sub modules :
 
 Access the cloned repo : `cd Lua.vm.js-Samples/`
 
-Start a  web server to start serving the files.
+Start a web server to start serving the files.
 
 ------------
 

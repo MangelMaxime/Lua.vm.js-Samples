@@ -23,7 +23,7 @@ end
 -- @param field Field table to check
 -- @return Return true if the value is not empty and return a msg string if there an error
 function isRequired(field)
-  return notEmpty(field.element.value), string.format("Field %s should not be empty", field.id)
+  return notEmpty(field.element.value), string.format("Field %s should not be empty", field.alias)
 end
 
 --- Check if the value if not "null" from Javascript point of view.
@@ -40,13 +40,22 @@ function notEmpty(value)
   return value ~= "" and notNullJs(value)
 end
 
+--- Validate a form and update the display if needed.
+-- @param this Context of the form to validate
+-- @param event Event that as trigger a valdiation
+-- @return True if the form is valid. False otherwise
 function validate(this, event)
   event:preventDefault()
 
   for keyFields, field in pairs(ui.fields) do
+    -- Clean the errors message
+    while notNullJs(field.errorElement) and notNullJs(field.errorElement.firstChild) do
+      field.errorElement:removeChild(field.errorElement.firstChild)
+    end
+
     for keys, values in pairs(field.rules) do
       local result, msg = values(field)
-      print(msg)
+      updateDisplay(field, result, msg)
     end
   end
 end
@@ -60,40 +69,83 @@ function isEmail(field)
   end
 end
 
+function updateDisplay(field, result, msg)
+  -- Check if we have an errorNode available for the correct field
+  if field.errorElement == nil then
+    -- Try go get the node from the DOM
+    local selector = string.format("ul.errors-display[data-validate=\"%s\"]", field.id)
+    local node = document:querySelector(selector)
+    -- If no node found in the DOM generate it otherwise memorize it
+    if (node == js.null) then
+      generateErrorNode(field)
+    else
+      field.errorElement = node
+    end
+  end
+
+  if not result then
+    addMessage(field, msg)
+  end
+end
+
+function addMessage(field, msg)
+  local node = document:createElement("li")
+  node.textContent = msg
+
+  field.errorElement:appendChild(node)
+end
+
+function generateErrorNode(field)
+  -- Create a new ul node and errors-display class
+  local node = document:createElement("ul")
+  node.classList:add("errors-display")
+  node:setAttribute("data-validate", field.id)
+  -- Add the node to the dom
+  field.element.parentNode.parentNode:appendChild(node)
+  -- Save the node reference in ui table
+  field.errorElement = node
+end
+
 ui = {
   formClass = "to-validate",
   formElement,
   fields = {
     pseudo = {
       id = "pseudo",
+      alias = "pseudo",
       rules = {
         isRequired
       },
-      element
+      element,
+      errorElement
     },
     email = {
       id = "email",
+      alias = "email",
       rules = {
         isRequired,
         isEmail
       },
-      element
+      element,
+      errorElement
     },
     password = {
       id = "password",
+      alias = "password",
       rules = {
         isRequired
       },
-      element
+      element,
+      errorElement
     },
     password_conf = {
       id = "password_conf",
+      alias = "password confirmation",
       rules = {
         isRequired
       },
-      element
+      element,
+      errorElement
     }
   }
 }
-
-init()
