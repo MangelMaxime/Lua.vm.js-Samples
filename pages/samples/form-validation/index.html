@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="/pages/css/modest.css" />
+  <link rel="stylesheet" href="/pages/css/style.css" />
+  <script type="text/javascript">
+  if (window.location.hostname != "localhost") {
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-136625-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  }
+</script>
+</head>
+<body>
+  <h1>Lua.vm.js-Samples</h1>
+
+<h2> Form validation</h2>
+
+<p><em>Summary</em></p>
+
+<p>The goal of this sample is to show how we can use a lua table to encapsulate all the
+ui logic.</p>
+
+<p>Extract :</p>
+
+<pre class="highlight lang_lua"><code><span class="kd">local</span> <span class="n">ui</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="n">formClass</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">to-validate&quot;</span><span class="p">,</span>
+  <span class="n">formElement</span><span class="p">,</span>
+  <span class="n">fields</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="n">pseudo</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">pseudo&quot;</span><span class="p">,</span>
+      <span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Pseudo&quot;</span><span class="p">,</span>
+      <span class="n">rules</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">isRequired</span>
+      <span class="p">},</span>
+      <span class="n">element</span><span class="p">,</span>
+      <span class="n">errorElement</span>
+    <span class="p">},</span>
+    <span class="n">email</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">email&quot;</span><span class="p">,</span>
+      <span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Email&quot;</span><span class="p">,</span>
+      <span class="n">rules</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">isRequired</span><span class="p">,</span>
+        <span class="n">isEmail</span>
+      <span class="p">},</span>
+      <span class="n">element</span><span class="p">,</span>
+      <span class="n">errorElement</span>
+    <span class="p">},</span>
+    <span class="n">password</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">password&quot;</span><span class="p">,</span>
+      <span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Password&quot;</span><span class="p">,</span>
+      <span class="n">rules</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">isRequired</span>
+      <span class="p">},</span>
+      <span class="n">element</span><span class="p">,</span>
+      <span class="n">errorElement</span>
+    <span class="p">},</span>
+    <span class="n">password_conf</span> <span class="o">=</span> <span class="p">{</span>
+      <span class="n">id</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">password_conf&quot;</span><span class="p">,</span>
+      <span class="n">alias</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">Password confirmation&quot;</span><span class="p">,</span>
+      <span class="n">equalTo</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="s">password&quot;</span><span class="p">,</span>
+      <span class="n">rules</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="n">isRequired</span><span class="p">,</span>
+        <span class="n">isEqual</span>
+      <span class="p">},</span>
+      <span class="n">element</span><span class="p">,</span>
+      <span class="n">errorElement</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span></code>
+</pre>
+
+
+<p>This table contains a list of fields where all the logic of validation is.</p>
+
+<p>Each field consist of:</p>
+
+<ul>
+<li><code>id</code> : id value to select the field via <code>document:getElementById(...)</code></li>
+<li><code>alias</code> : value used to display the errors information</li>
+<li><code>rules</code> : list of rules to apply on the current field</li>
+<li><code>element</code> : reference to the DOM element</li>
+<li><code>errorElement</code> : reference to the DOM element used to display the errors</li>
+</ul>
+
+
+<p>The fields can also have some extra keys like:</p>
+
+<ul>
+<li><code>equalTo</code> : used by the isEqual rule to know the field to compare
+with the current one</li>
+</ul>
+
+
+<p><a href="/samples/form-validation/">Go to sample</a></p>
+
+
+  <div class="footer">
+    Generated on Sat Jun 25 00:06:45 2016 &middot; <a href="https://twitter.com/ShadaenDev">@ShadaenDev</a>
+  </div>
+</body>
+</html>
