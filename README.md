@@ -24,10 +24,11 @@ Run the server : `./node_modules/http-server/bin/http-server`
 
 ## TODO
 
-- [ ] Documentation
+- [ ] Documentation of the code
+- [ ] Explain, in a README the idea behind each sample
 - [ ] Simple turtle
 - [ ] Turtle that can be commanded
-- [ ] Form validation
+- [X] Form validation
 - [ ] Ajax call
 - [ ] Json serialisation and deserialisation
 
