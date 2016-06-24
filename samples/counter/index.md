@@ -12,4 +12,4 @@ The sample consist on a simple counter with the following actions:
 -   Reset => Reset value to 0
 -   +1 => Add 1 to the value
 
-[Go to sample](/samples/counter/)
+[Go to sample](/Lua.vm.js-Samples/samples/counter/)

@@ -10,4 +10,4 @@ animation frame available.
 This clock is also able to support i18n translations.
 [Planned here](https://github.com/MangelMaxime/Lua.vm.js-Samples/issues/2)
 
-[Go to sample](/samples/clock/)
+[Go to sample](/Lua.vm.js-Samples/samples/clock/)

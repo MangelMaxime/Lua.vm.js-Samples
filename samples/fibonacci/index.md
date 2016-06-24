@@ -6,4 +6,4 @@
 
 The sample consist on a fibonacci calculator.
 
-[Go to sample](/samples/fibonacci/)
+[Go to sample](/Lua.vm.js-Samples/samples/fibonacci/)

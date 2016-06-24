@@ -72,4 +72,4 @@ The fields can also have some extra keys like:
 -   `equalTo` : used by the isEqual rule to know the field to compare
 with the current one
 
-[Go to sample](/samples/form-validation/)
+[Go to sample](/Lua.vm.js-Samples/samples/form-validation/)
