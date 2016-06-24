@@ -22,15 +22,24 @@ Install the *devDependencies* : `npm install`
 
 Run the server : `./node_modules/http-server/bin/http-server`
 
+## How to contribute ?
+
+Any contributions are well comes here are some possible ways :
+
+-   Ask for specific samples by creating an issue
+-   Report any bug, suggestion using an issue
+-   Propose new samples via MR
+
+
 ## TODO
 
-- [ ] Documentation of the code
-- [ ] Explain, in a README the idea behind each sample
-- [ ] Simple turtle
-- [ ] Turtle that can be commanded
-- [X] Form validation
-- [ ] Ajax call
-- [ ] Json serialisation and deserialisation
+-   [ ] Documentation of the code
+-   [ ] Explain, in a README the idea behind each sample
+-   [ ] Simple turtle
+-   [ ] Turtle that can be commanded
+-   [x] Form validation
+-   [ ] Ajax call
+-   [ ] Json serialisation and deserialisation
 
 ## Licences
 
