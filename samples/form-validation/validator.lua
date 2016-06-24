@@ -46,6 +46,9 @@ end
 -- @return True if the form is valid. False otherwise
 function validate(this, event)
   event:preventDefault()
+  event:stopPropagation()
+
+  local res = true
 
   for keyFields, field in pairs(ui.fields) do
     -- Clean the errors message
@@ -55,8 +58,13 @@ function validate(this, event)
 
     for keys, values in pairs(field.rules) do
       local result, msg = values(field)
+      res = res and result
       updateDisplay(field, result, msg)
     end
+  end
+
+  if res then
+    window:alert("Everything is OK")
   end
 end
 
@@ -66,6 +74,16 @@ function isEmail(field)
     return res
   else
     return res, string.format("Value : %s is not a valid email", field.element.value)
+  end
+end
+
+function isEqual(field)
+  local elt = ui.fields[field.equalTo]
+  local res = field.element.value == elt.element.value
+  if res then
+    return res
+  else
+    return res, string.format("%s and %s doesn't match", field.alias, elt.alias)
   end
 end
 
@@ -112,7 +130,7 @@ ui = {
   fields = {
     pseudo = {
       id = "pseudo",
-      alias = "pseudo",
+      alias = "Pseudo",
       rules = {
         isRequired
       },
@@ -121,7 +139,7 @@ ui = {
     },
     email = {
       id = "email",
-      alias = "email",
+      alias = "Email",
       rules = {
         isRequired,
         isEmail
@@ -131,7 +149,7 @@ ui = {
     },
     password = {
       id = "password",
-      alias = "password",
+      alias = "Password",
       rules = {
         isRequired
       },
@@ -140,9 +158,11 @@ ui = {
     },
     password_conf = {
       id = "password_conf",
-      alias = "password confirmation",
+      alias = "Password confirmation",
+      equalTo = "password",
       rules = {
-        isRequired
+        isRequired,
+        isEqual
       },
       element,
       errorElement
