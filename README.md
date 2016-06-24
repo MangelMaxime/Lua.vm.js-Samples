@@ -5,6 +5,11 @@ The goal of this repository is to show how Lua with [Lua.vm.js](https://github.c
 **Boat sample**
 ![Boat sample](https://raw.githubusercontent.com/MangelMaxime/Lua.vm.js-Samples/master/img/boat_sample.png)
 
+## Live sample
+
+You can find [here](http://mangelmaxime.github.io/Lua.vm.js-Samples/pages/www/)
+an online site running the samples and explaining the goal of each one.
+
 ## How to use
 
 Clone this repository with sub modules :
