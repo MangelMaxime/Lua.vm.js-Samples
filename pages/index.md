@@ -8,19 +8,19 @@ Here is the list of the samples available :
 
 -   Clock
     -   [Readme]($root/../samples/clock/index.html)
-    -   [Demo](/samples/clock/)
+    -   [Demo](/Lua.vm.js-Samples/samples/clock/)
 -   Counter
     -   [Readme]($root/../samples/counter/index.html)
-    -   [Demo](/samples/counter/)
+    -   [Demo](/Lua.vm.js-Samples/samples/counter/)
 -   Fibonacci
     -   [Readme]($root/../samples/fibonacci/index.html)
-    -   [Demo](/samples/fibonacci/)
+    -   [Demo](/Lua.vm.js-Samples/samples/fibonacci/)
 -   Form validation
     -   [Readme]($root/../samples/form-validation/index.html)
-    -   [Demo](/samples/form-validation/)
+    -   [Demo](/Lua.vm.js-Samples/samples/form-validation/)
 -   Simple canvas: boat
     -   [Readme]($root/../samples/simple-canvas/index.html)
-    -   [Demo](/samples/simple-canvas/)
+    -   [Demo](/Lua.vm.js-Samples/samples/simple-canvas/)
 
 ## Special thanks
 
