@@ -26,6 +26,6 @@ Here is the list of the samples available :
 
 Special thanks to :
 
--   Daurnimator for developping and maintaining Lua.vm.js
+-   Daurnimator for developing and maintaining Lua.vm.js
 -   [markdowncss](https://github.com/markdowncss) for the [Modest theme](https://github.com/markdowncss/modest)
 -   [Leafo](https://twitter.com/moonscript) for [sitegen](https://github.com/leafo/sitegen) which is used to generate this site
